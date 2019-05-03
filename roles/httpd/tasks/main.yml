@@ -7,7 +7,7 @@
 - name: install the latest version of Apache
   yum:
     name: httpd
-    state: "present"
+    state: "{{state}}"
   become: yes
 
 - name: Start service httpd, if not started
@@ -18,7 +18,7 @@
   ignore_errors: true
 
 - name: clone the code
-  command: "git clone https://github.com/kapilsthakkar25/webapp-repo /var/www/html"
+  command: "git clone {{myrepo}} {{deploypath}}"
   become: yes
   ignore_errors: true
 
