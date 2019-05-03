@@ -18,7 +18,7 @@
   ignore_errors: true
 
 - name: clone the code
-  command: "git clone {{ myrepo }} {{ deploypath }}"
+  command: "git clone https://github.com/kapilsthakkar25/webapp-repo /var/www/html"
   become: yes
   ignore_errors: true
 
