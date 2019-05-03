@@ -1,6 +1,6 @@
 ---
 # tasks file for httpd
-
+jj
 - name: Clean folder
   command: rm -rf /var/www/html
   become: yes
